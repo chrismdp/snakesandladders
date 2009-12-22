@@ -19,7 +19,7 @@ Feature: Smoke test: combination of moves
     And player 2 rolls 6
     And player 2 rolls 3
     And player 3 rolls 2
-    And player 1 rolls 4
+    And player 1 rolls 3
     And player 2 rolls 3
     Then player 1 is now on position 10
     And player 2 is now on position 23
