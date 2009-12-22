@@ -4,18 +4,11 @@ Feature: Movement
   I want to roll dice and move up and down the board
 
   Background:
-    Given the board:
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . 02. 10. . . . .|
-  
+    Given a board with:
+      | type   | from | to |
+      | snake  | 3    | 2  |
+      | ladder | 5    | 10 |
+
   Scenario: Starting a game
     When I start a game with 2 players
     And player 1 rolls 1

@@ -4,17 +4,10 @@ Feature: Win condition
   I want to land on space 100 and win the game
 
   Background:
-    Given the board:
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
-      |. . . . . . . . . .|
+    Given a board with:
+      | type   | from | to |
+      | snake  | 3    | 2  |
+      | ladder | 5    | 10 |
 
   Scenario: Win the game
     Given player 1 is on position 97
