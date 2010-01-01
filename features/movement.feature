@@ -8,9 +8,9 @@ Feature: Movement
       | type   | from | to |
       | snake  | 3    | 2  |
       | ladder | 5    | 10 |
+    And I start a game with 2 players
 
   Scenario: Starting a game
-    When I start a game with 2 players
     And player 1 rolls 1
     Then player 1 is now on position 1
     

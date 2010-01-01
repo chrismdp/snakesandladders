@@ -8,6 +8,7 @@ Feature: Win condition
       | type   | from | to |
       | snake  | 3    | 2  |
       | ladder | 5    | 10 |
+    And I start a game with 2 players
 
   Scenario: Win the game
     Given player 1 is on position 97
