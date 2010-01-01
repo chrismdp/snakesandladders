@@ -24,3 +24,4 @@ Feature: Smoke test: combination of moves
     Then player 1 is now on position 10
     And player 2 is now on position 23
     And player 3 is now on position 2
+    And it is now player 3's go
