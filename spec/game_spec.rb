@@ -52,15 +52,16 @@ describe Game do
   end
   context "winning" do
     before do
-      @game = Game.new(mock(:board), 1)
+      @board = mock(:board, :winning_position => false)
+      @game = Game.new(@board, 1)
     end
 
     it "has no winner when no-one has reached 100" do
       @game.winner.should == nil
     end
     it "has a winner when someone reaches 100" do
-      @game.set_player_position(2, 100)
-      @game.winner.should == 2
+      @board.stub!(:winning_position).and_return true
+      @game.winner.should == 1
     end
   end
 end

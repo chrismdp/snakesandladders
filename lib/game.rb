@@ -7,7 +7,8 @@ class Game
   end
 
   def roll(dice_value)
-    @player_position[next_player] = @board.destination_of(@player_position[next_player] + dice_value)
+    destination = @board.destination_of(player_position(next_player) + dice_value)
+    set_player_position(next_player, destination)
     @turn_count += 1 unless dice_value == 6
   end
 
@@ -24,8 +25,9 @@ class Game
   end
 
   def winner
-    @player_position.each do |k,v|
-      return k if v == 100
+    @player_count.times do |count|
+      player = count + 1
+      return player if @board.winning_position(player_position(player))
     end
     nil
   end

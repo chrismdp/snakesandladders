@@ -21,4 +21,15 @@ describe Board do
       board.destination_of(105).should == 95
     end
   end
+  context "winning position" do
+    it "returns 100 as a winning position" do
+      board = Board.new
+      board.winning_position(100).should == true
+    end
+
+    it "returns all other positions as not winning" do
+      Board.new.winning_position(101).should == false
+      Board.new.winning_position(99).should == false
+    end
+  end
 end
